@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "04d58666-3729-48b2-ab37-28377e4d65d8",
+		"name": "flightsDemoProc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20952600"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/api/flights",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerDetails\": {\r\n        \"firstName\": \"newdude\",\r\n        \"lastName\": \"Anole\",\r\n        \"city\": \"Houston\",\r\n        \"state\": \"TX\"\r\n    },\r\n    \"flightDetails\": {\r\n        \"flight_id\": 4,\r\n        \"price\": 500\r\n    },\r\n    \"paymentDetails\": {\r\n        \"amount\": 500\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/flights",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"flights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/flights Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerDetails\": {\r\n        \"firstName\": \"newdude\",\r\n        \"lastName\": \"Anole\",\r\n        \"city\": \"Houston\",\r\n        \"state\": \"TX\"\r\n    },\r\n    \"flightDetails\": {\r\n        \"flight_id\": 4,\r\n        \"price\": 500\r\n    },\r\n    \"paymentDetails\": {\r\n        \"amount\": 500\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/flights",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"flights"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

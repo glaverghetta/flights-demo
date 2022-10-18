@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "737bcdf6-5654-4c20-b725-0bab1084b85b",
+		"name": "flightsDemoSys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20952600"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/api/payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"booking_ref_number\": \"bref1000\",\r\n    \"amount\": 52500000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/payment",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://flightsdemosys.us-e2.cloudhub.io/api/flights",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cust_number\": \"cust1\",\r\n    \"flight_id\": 1,\r\n    \"payment_amount\": 450\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://flightsdemosys.us-e2.cloudhub.io/api/flights",
+					"protocol": "http",
+					"host": [
+						"flightsdemosys",
+						"us-e2",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"flights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://flightsdemosys.us-e2.cloudhub.io/api/customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Gabriel\",\r\n    \"lastName\": \"Laverghetta\",\r\n    \"city\": \"Tampa\",\r\n    \"state\": \"FL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://flightsdemosys.us-e2.cloudhub.io/api/customer",
+					"protocol": "http",
+					"host": [
+						"flightsdemosys",
+						"us-e2",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/booking?booking_ref_number=bref4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/booking?booking_ref_number=bref4",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"booking"
+					],
+					"query": [
+						{
+							"key": "booking_ref_number",
+							"value": "bref4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Ga\",\r\n    \"lastName\": \"Lav\",\r\n    \"state\": \"F\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

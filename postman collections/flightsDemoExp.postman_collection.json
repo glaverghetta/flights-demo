@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "bab7a6d9-370d-479f-9530-2fb6d9be2d6f",
+		"name": "flightsDemoExp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20952600"
+	},
+	"item": [
+		{
+			"name": "http://flightsdemoexp.us-e2.cloudhub.io/api/flights",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerDetails\": {\r\n        \"firstName\": \"unencountered\",\r\n        \"lastName\": \"Laverghetta\",\r\n        \"city\": \"Tampa\",\r\n        \"state\": \"FL\"\r\n    },\r\n    \"flightDetails\": {\r\n        \"flight_id\": 4,\r\n        \"price\": 500\r\n    },\r\n    \"paymentDetails\": {\r\n        \"amount\": 500\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/flights",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"flights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/flights?departAirport=LA&arriveAirport=NY",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "departAirport",
+						"value": "\"LA\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "arriveAirport",
+						"value": "\"NY\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "dateDepart",
+						"value": "\"2022-09-30\"",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/flights?departAirport=LA&arriveAirport=NY&dateDepart=2022-09-30",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"flights"
+					],
+					"query": [
+						{
+							"key": "departAirport",
+							"value": "LA"
+						},
+						{
+							"key": "arriveAirport",
+							"value": "NY"
+						},
+						{
+							"key": "dateDepart",
+							"value": "2022-09-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/customer?firstName=Gabriel&lastName=Laverghetta&city=Tampa&state=FL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/customer?firstName=Gabriel&lastName=Laverghetta&city=Tampa&state=FL",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customer"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Gabriel"
+						},
+						{
+							"key": "lastName",
+							"value": "Laverghetta"
+						},
+						{
+							"key": "city",
+							"value": "Tampa"
+						},
+						{
+							"key": "state",
+							"value": "FL"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
